@@ -1,6 +1,6 @@
-# Lakbay
+# Title - Lakbay
 
-## Discover Hidden Gems Across the Philippines
+## Secondary Title - Discover Hidden Gems Across the Philippines
 
 ### Overview
 
@@ -13,6 +13,7 @@ Visitors can browse carefully chosen travel guides, learn about some local festi
 ### Logo Concept
 
 The logo is inspired by the Philippine flag. It features a yellow sun in the center, a blue star, a white star, and a small red circle at the center; their colors are also based on the colors of the national flag. The elements combined resemble a compass as it guides the users on planning their vacation. 
+![alt text](assets/lakbay_logov2.png)
 
 ---
 
@@ -31,25 +32,14 @@ The logo is inspired by the Philippine flag. It features a yellow sun in the cen
 
 ### JavaScript Integration
 
-- **Travel Planner Page**: Drag-and-drop route builder with local storage to save plans.
+- **Travel Planner Page**: Drag-and-drop route builder with local storage to save plans. Also a calculator where you input certain travel expenses and will output the total cost of the trip.
 - **Destinations Page**: Interactive map with clickable regions and pop-up info cards.
 - **Culture Page**: Expandable sections for different cultural topics.
 - **Navigation**: Responsive menu with dropdowns and smooth scrolling.
 
 ---
 
-### Wireframe Mockups
-- #### Old
-    - ##### Home
+### Wireframe Mockups 
+- ([Canva Link](https://www.canva.com/design/DAG3LDOXUkI/ixpo-hTWTPzFFcBfEbgSTQ/edit?utm_content=DAG3LDOXUkI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton))
 
-    - ##### Destinations
-
-    - ##### Culture & Traditions
-
-    - ##### Travel Planner
-
-    - ##### About Us
-    
-- #### Updated
-    - ##### none yet
 
