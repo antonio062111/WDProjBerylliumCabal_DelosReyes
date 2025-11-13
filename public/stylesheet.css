@@ -26,7 +26,6 @@ header {
   color: white;
   position: static;
   top: 0;
-  
 }
 
 
@@ -34,17 +33,22 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+    position: relative; left: 40px;
+
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  position: relative; left: -160px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  position: relative; left: -80px;
+
 }
 
 .nav-links a {
