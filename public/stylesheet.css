@@ -167,7 +167,17 @@ footer {
   margin: 0 8px;
 }
 
+.map h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
-
+.map img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
 
 
