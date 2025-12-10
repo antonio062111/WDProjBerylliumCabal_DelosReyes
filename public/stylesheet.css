@@ -115,11 +115,56 @@ button:hover{
 .highlights {
   padding: 3rem 0;
   margin: 50px auto;
+  margin-left: 10px;
+ margin-right: 10px;
   border-radius: 15px;
   background-color: whitesmoke;
 }
 
 .highlights h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  height: 200px;
+}
+
+/* Destinations Section */
+.destinations {
+  padding: 3rem 0;
+  margin: 50px auto;
+
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+
+.destinations h2 {
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -165,19 +210,6 @@ footer {
 .social-icons img {
   height: 24px;
   margin: 0 8px;
-}
-
-.map h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.map img {
-  display: block;
-  margin: 0 auto;
-  border-radius: 8px;
-  max-width: 100%;
-  height: auto;
 }
 
 
