@@ -115,8 +115,6 @@ button:hover{
 .highlights {
   padding: 3rem 0;
   margin: 50px auto;
-  margin-left: 10px;
- margin-right: 10px;
   border-radius: 15px;
   background-color: whitesmoke;
 }
@@ -159,9 +157,11 @@ button:hover{
 .destinations {
   padding: 3rem 0;
   margin: 50px auto;
-
-  border-radius: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 15px;
   background-color: whitesmoke;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .destinations h2 {
@@ -212,4 +212,40 @@ footer {
   margin: 0 8px;
 }
 
+/* Dividers */
+.divider {
+  display: flex;
+  justify-content: center;
+  margin: 100px;
+}
 
+/* Destinations */
+
+.place {
+
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 1rem;
+  margin-left: 50px;
+  margin-right: 50px;
+
+}
+
+.place img {
+  display: flex;
+  width: 50%;
+  border-radius: 6px;
+  margin-top: -85px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  justify-content: left;
+  padding: 100px;
+  }
+
+  .place p{
+    display: flex;
+    justify-content: right;
+
+  }
