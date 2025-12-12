@@ -249,3 +249,10 @@ footer {
     justify-content: right;
 
   }
+
+.bg{
+  padding: 3rem 0;
+  margin: 50px auto;
+  border-radius: 15px;
+  background-color: whitesmoke;
+}
