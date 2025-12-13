@@ -13,7 +13,8 @@ Visitors can browse carefully chosen travel guides, learn about some local festi
 ### Logo Concept
 
 The logo is inspired by the Philippine flag. It features a yellow sun in the center, a blue star, a white star, and a small red circle at the center; their colors are also based on the colors of the national flag. The elements combined resemble a compass as it guides the users on planning their vacation. 
-![alt text](assets/lakbay_logov2.png)
+![V1](assets/lakbay_logov2.png) ![V2](assets/lakbay_logo_v3/lakbay_logov3_icon.png) ![V2 white](assets/lakbay_logo_v3/lakbay_logov3_light.png)
+
 
 ---
 
