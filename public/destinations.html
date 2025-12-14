@@ -27,11 +27,11 @@
       <nav>
         <ul class="nav-links">
            <li><a href="../index.html">Home</a></li>
-          <li><a href="/public/destinations.html">Destinations</a></li>
-          <li><a href="/public/culture&traditions.html">Culture & Traditions</a></li>
-          <li><a href="/public/planner.html">Planner</a></li>
-          <li><a href="/public/about.html">About</a></li>
-          <li><a href="/public/sources.html">Sources</a></li>
+          <li><a href="/destinations.html">Destinations</a></li>
+          <li><a href="/culture&traditions.html">Culture & Traditions</a></li>
+          <li><a href="/planner.html">Planner</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/sources.html">Sources</a></li>
         </ul>
       </nav>
     </div>
@@ -42,7 +42,7 @@
     <section class="hero">
       <div class="container">
         <h1>Explore Destinations</h1>
-        <p>Discover the beauty of Calabarzon and beyond—each province with its own unique charm.</p>
+        <p>Discover the beauty of the Philippines and beyond provinces with their unique charm</p>
       </div>
     </section><br><br>
 
@@ -101,8 +101,8 @@
       <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
-      // Initialize map centered on Calabarzon
-      var map = L.map('map').setView([14.2, 121.0], 9);
+      // Initialize map centered on the Philippines (geographic center)
+      var map = L.map('map').setView([12.8797, 121.7740], 5);
 
       // Add OpenStreetMap tiles
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
