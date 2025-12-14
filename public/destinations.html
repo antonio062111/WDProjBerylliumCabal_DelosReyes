@@ -5,222 +5,125 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Destinations | Lakbay</title>
-  <link rel="icon" href="../assets/lakbay_logo_v3/lakbay_logov3_icon.png" type="image/png" />
+  <link rel="icon" href="assets/lakbay_logov2.png" type="image/png" />
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    #map {
+      height: 500px;
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <div class="container nav-container">
-      <img src="../assets/lakbay_logo_v3/lakbay_logov3_light.png" width="60" alt="Lakbay Logo" />
-      <div class="logo"> <a href="../index.html" style="color: aliceblue; text-decoration: none;">Lakbay</a></div>
+      <img src="assets/lakbay_logov2.png" width="80" alt="Lakbay Logo" />
+      <div class="logo"> <a href="/index.html" style="color: aliceblue; text-decoration: none;">Lakbay</a></div>
       <nav>
         <ul class="nav-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="destinations.html">Destinations</a></li>
-          <li><a href="culture&traditions.html">Culture & Traditions</a></li>
-          <li><a href="planner.html">Planner</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="sources.html">Sources</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="public/destinations.html">Destinations</a></li>
+          <li><a href="public/culture&traditions.html">Culture & Traditions</a></li>
+          <li><a href="public/planner.html">Planner</a></li>
+          <li><a href="public/about.html">About</a></li>
+          <li><a href="public/sources.html">Sources</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
+      <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <h1>Destinations</h1>
-        <p>Explore hidden gems and local treasures in the Philippines</p>
+        <h1>Explore Destinations</h1>
+        <p>Discover the beauty of Calabarzon and beyond—each province with its own unique charm.</p>
       </div>
+    </section><br><br>
+
+    <!-- Interactive Map Section -->
+    <section class="container">
+      <h2>Interactive Map</h2>
+      <div id="map"></div>
     </section>
 
-    <section class="destinations">
-      <h2>Destinations</h2>
+    <!-- Destinations Section -->
+    <section id="destinations" class="container destinations">
+      <h2>Featured Provinces</h2>
       <div class="cards">
-
         <div class="card">
-          <img src="https://philippineshiddengems.com/wp-content/uploads/2025/01/tourist-spots-in-baguio_mines-view-park-in-baguio_kristine.jpg" width="400" alt="Batanes" />
-          <h3>Baguio</h3>
-          <p>Rolling hills and peaceful landscapes.</p>
+          <img src="https://www.lakwatsero.com/wp-content/uploads/2018/09/Laguna.jpg" alt="Laguna" />
+          <h3>Laguna</h3>
+          <p>Hot springs, lakes, and historic towns. Perfect for nature and heritage lovers.</p>
         </div>
-        
         <div class="card">
-          <img src="https://files01.pna.gov.ph/category-list/2025/03/31/img5706-1.jpeg" width="400" alt="Batanes" />
-          <h3>Batanes</h3>
-          <p>Rolling hills and peaceful landscapes.</p>
+          <img src="https://www.lakwatsero.com/wp-content/uploads/2018/09/Batangas.jpg" alt="Batangas" />
+          <h3>Batangas</h3>
+          <p>Beaches, diving spots, and the iconic Taal Volcano. A coastal paradise close to Manila.</p>
         </div>
-
         <div class="card">
-          <img src="https://lakbaypinas.com/wp-content/uploads/2025/05/snapins-ai_3628729345260639734-1024x576.jpg" width="400" alt="Batanes" />
-          <h3>La Union</h3>
-          <p>Rolling hills and peaceful landscapes.</p>
+          <img src="https://www.lakwatsero.com/wp-content/uploads/2018/09/Cavite.jpg" alt="Cavite" />
+          <h3>Cavite</h3>
+          <p>Rich in history, from Aguinaldo Shrine to coastal escapes. Gateway to heritage tours.</p>
         </div>
-
         <div class="card">
-          <img src="https://backpackingwithabook.com/wp-content/uploads/2022/02/guyam-island-siargao-travel-guide-1-1.png" width = 400 alt="Siargao" />
-          <h3>Siargao</h3>
-          <p>Surf, lagoons, and island vibes.</p>
+          <img src="https://www.lakwatsero.com/wp-content/uploads/2018/09/Rizal.jpg" alt="Rizal" />
+          <h3>Rizal</h3>
+          <p>Art galleries, mountain views, and cultural hubs. A creative retreat near the city.</p>
         </div>
-
         <div class="card">
-          <img src="https://images.squarespace-cdn.com/content/v1/5a87961cbe42d637c54cab93/1552229691786-1M8KURNE27AO4YVQZDRO/vigan-philippines-city-guide%2B%2Bthings-to-do-see?format=2500w" width="400" alt="Vigan" />
-          <h3>Vigan</h3>
-          <p>Colonial charm and heritage streets.</p>
+          <img src="https://www.lakwatsero.com/wp-content/uploads/2018/09/Quezon.jpg" alt="Quezon" />
+          <h3>Quezon</h3>
+          <p>Festivals, coconut plantations, and scenic coastlines. A vibrant mix of culture and nature.</p>
         </div>
-        
       </div>
     </section>
-
-    <section class="divider">
-      <img src="../assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="../assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="../assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="../assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="../assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="../assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="../assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="../assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="../assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="../assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="../assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="../assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="../assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="../assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="../assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="../assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-    </section>
-
-    <section class="place">
-      <h1>Baguio</h1>
-      <section class="placecontent">
-      <img src="https://visita.baguio.gov.ph/assets/images/Lions%20Head.jpg" width="600" alt="Baguio" />
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </section>
-    </section>
-
-    <section class="divider">
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-    </section>
-
-    <section class="place">
-      <h1>Batanes</h1>
-      <section class="placecontent">
-      <img src="https://www.windowseat.ph/wp-content/uploads/2018/04/batanes-lighthouses.jpg" width="600" alt="Batanes" />
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </section>
-    </section>
-
-    <section class="divider">
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-    </section>
-
-    <section class="place">
-      <h1>La Union</h1>
-      <section class="placecontent">
-      <img src="https://visita.baguio.gov.ph/assets/images/Lions%20Head.jpg" width="600" alt="Baguio" />
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </section>
-    </section>
-
-    <section class="divider">
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-    </section>
-
-    <section class="place">
-      <h1>Siargao</h1>
-      <section class="placecontent">
-      <img src="https://visita.baguio.gov.ph/assets/images/Lions%20Head.jpg" width="600" alt="Baguio" />
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </section>
-    </section>
-
-    <section class="divider">
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-      <img src="/assets/lakbay_logov2.png" alt="Lakbay" width="50" />
-    </section>
-
-    <section class="place">
-      <h1>Vigan</h1>
-      <section class="placecontent">
-      <img src="https://visita.baguio.gov.ph/assets/images/Lions%20Head.jpg" width="600" alt="Baguio" />
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </section>
-    </section>
-
-
-
   </main>
+
   <footer>
     <div class="footer-content">
       <div class="rights">
-      <p>&copy; 2025 Lakbay. All rights reserved.</p>
-      <div class="social-icons">
-        <a href="https://github.com/antonio062111/WDProjBerylliumCabal_DelosReyes"><img src="../assets/github-mark-white.png" alt="GitHub Page" /></a>
-        <a href="#"><img src="../assets/instagram-logo.avif" alt="Instagram" /></a>
-        <a href="#"><img src="../assets/youtube-icon.avif" alt="YouTube" /></a>
-      </div>
+        <p>&copy; 2025 Lakbay. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="https://github.com/antonio062111/WDProjBerylliumCabal_DelosReyes"><img src="assets/github-mark-white.png" alt="GitHub Page" /></a>
+          <a href="#"><img src="assets/instagram-logo.avif" alt="Instagram" /></a>
+          <a href="#"><img src="assets/youtube-icon.avif" alt="YouTube" /></a>
+        </div>
       </div>
     </div>
   </footer>
-  <script src="js/script.js"></script>
+
+      <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+      // Initialize map centered on Calabarzon
+      var map = L.map('map').setView([14.2, 121.0], 9);
+
+      // Add OpenStreetMap tiles
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+
+      // Province markers
+      var provinces = [
+        { name: "Laguna", coords: [14.17, 121.33], info: "Hot springs, lakes, and heritage towns." },
+        { name: "Batangas", coords: [13.75, 121.06], info: "Beaches, diving spots, and Taal Volcano." },
+        { name: "Cavite", coords: [14.48, 120.9], info: "Historical landmarks and coastal escapes." },
+        { name: "Rizal", coords: [14.68, 121.18], info: "Art galleries, mountain views, and cultural hubs." },
+        { name: "Quezon", coords: [13.94, 122.1], info: "Festivals, coconut plantations, and scenic coastlines." }
+      ];
+
+      provinces.forEach(function(province) {
+        L.marker(province.coords)
+          .addTo(map)
+          .bindPopup("<b>" + province.name + "</b><br>" + province.info);
+      });
+    </script>
+
 </body>
 </html>
-
