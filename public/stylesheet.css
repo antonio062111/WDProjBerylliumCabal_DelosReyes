@@ -33,14 +33,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-    position: relative; left: 40px;
+  position: relative; left: 50px;
 
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
-  position: relative; left: -160px;
+  position: relative; left: -180px;
 }
 
 .nav-links {
@@ -56,16 +56,10 @@ header {
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s ease;
-  
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
   font-size: 1.1rem;
-}
-
-.nav-links a:active {
-  color: #12009c;
 }
 
 
