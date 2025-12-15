@@ -282,4 +282,11 @@ footer {
   border-radius: 10px;
   padding: 5px;
   border: none;
+  transition: 0.3s ease;
+}
+
+.travelplanner input[type="button"]:hover {
+  background-color: #a07828;
+  padding: 8px;
+  
 }
