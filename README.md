@@ -1,6 +1,6 @@
 # Title - Lakbay
 
-## Secondary Title - Discover Hidden Gems Across the Philippines
+## Discover Hidden Gems Across the Philippines
 
 ### Overview
 
@@ -22,10 +22,10 @@ The logo is inspired by the Philippine flag. It features a yellow sun in the cen
 
 | Page Title         | Description |
 |--------------------|-------------|
-| **Home**           | Welcome page with featured destinations and highlights of festivals. |
-| **Destinations**   | Interactive map and region-based listings of tourist spots with photos, descriptions, and travel tips. |
-| **Culture & Traditions** | Articles and videos about local traditions, foods, dances, and indigenous practices. |
-| **Travel Planner** | Custom route planner with drag-and-drop features and suggested routes. |
+| **Home**           | Welcome page with featured destinations |
+| **Destinations**   | Interactive map and region-based listings of tourist spots with photos and descriptions. |
+| **Culture & Traditions** | Descriptions about local traditions, dances, and indigenous practices. |
+| **Travel Planner** | Has a calculator which computes the needed budget for trips. |
 | **About Us**       | Mission, team, and contact information. |
 | **Sources** | Citations |
 
@@ -33,10 +33,8 @@ The logo is inspired by the Philippine flag. It features a yellow sun in the cen
 
 ### JavaScript Integration
 
-- **Travel Planner Page**: Drag-and-drop route builder with local storage to save plans. Also a calculator where you input certain travel expenses and will output the total cost of the trip.
+- **Travel Planner Page**: A calculator where you input certain travel expenses and will output the total cost of the trip.
 - **Destinations Page**: Interactive map with clickable regions and pop-up info cards.
-- **Culture Page**: Expandable sections for different cultural topics.
-- **Navigation**: Responsive menu with dropdowns and smooth scrolling.
 
 ---
 

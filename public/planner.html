@@ -34,17 +34,20 @@
       </div>
     </section>
 
+    <!-- Hotel Cost Calculator-->
     <section class="travelplanner">
       <h2>Hotel Cost</h2>
       <table>
+
         <tr>
           <th>Total Price Per Night</th>
-          <th>Number of Nights</th>
+          <td><input type="number" id="price" placeholder="Enter price per night: "></td>
         </tr>
 
         <tr> 
-          <td><input type="number" id="price" placeholder="Enter price per night: "></td>
+          <th>Number of Nights</th>
           <td><input type="number" id="nights" placeholder="Enter number of nights: "></td>
+        </tr>
       </table>
 
       <input type="button" value="Calculate Hotel Cost" onclick="calculateHotelCost()">
@@ -52,28 +55,48 @@
       <p id="hotelResult">Subtotal for hotel: </p>
     </section>
 
+    <!-- Food Cost Calculator-->
     <section class="travelplanner">
-      <h2>Hotel Cost</h2>
+      <h2>Food Cost</h2>
       <table>
         <tr>
-          <th>Total Price Per Night</th>
-          <th>Number of Nights</th>
+          <td>Breakfast</td>
+          <td><input type="number" id="breakfast" placeholder="Enter price for breakfast for 1 person: "></td>
         </tr>
 
-        <tr> 
-          <td><input type="number" id="price" placeholder="Enter price per night: "></td>
-          <td><input type="number" id="nights" placeholder="Enter number of nights: "></td>
+        <tr>
+          <td>Lunch</td>
+          <td><input type="number" id="lunch" placeholder="Enter price for lunch for 1 person: "></td>
+        <tr>
+          
+        <tr>
+          <td>Dinner</td>
+          <td><input type="number" id="dinner" placeholder="Enter price for dinner for 1 person: "></td>
+        </tr>
+
+        <tr>
+          <td>Number of Pax</td>
+          <td><input type="number" id="pax" placeholder="Enter number of pax: "></td>
+        </tr>
+
+        <tr>
+          <td>Number of Days</td>
+          <td><input type="number" id="days" placeholder="Enter number of days: "></td>
+        </tr> 
       </table>
 
-      <input type="button" value="Calculate Hotel Cost" onclick="calculateHotelCost()">
+      <input type="button" value="Calculate Food Cost" onclick="calculateFoodCost()">
+    
 
-      <p id="hotelResult">Subtotal for hotel: </p>
+      <p id="foodResult">Subtotal for food: </p>
     </section>
 
-
-
-
-
+    <!-- Grand Total Calculator -->
+    <section class="travelplanner">
+      <h2 id="grandTotal"> Grand Total!</h2>
+      <input type="button" value="Calculate Grand Total" onclick="calculateGT()">
+    </section>
+    
   </main>
   <footer>
     <div class="footer-content">
