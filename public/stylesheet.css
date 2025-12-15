@@ -148,16 +148,6 @@ button:hover{
 }
 
 /* Destinations Section */
-.destinations {
-  padding: 3rem 0;
-  margin: 50px auto;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-radius: 15px;
-  background-color: whitesmoke;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
 .destinations h2 {
   text-align: center;
   margin-bottom: 2rem;
@@ -254,9 +244,8 @@ footer {
 /* Planner */
 
 .travelplanner {
-  background: white;
+  background: whitesmoke;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   text-align: center;
   padding: 1rem;
   margin-left: 200px;
