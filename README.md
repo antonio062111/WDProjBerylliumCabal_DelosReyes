@@ -1,4 +1,4 @@
-# Title - Lakbay
+# Lakbay
 
 ## Discover Hidden Gems Across the Philippines
 
