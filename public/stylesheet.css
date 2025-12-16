@@ -229,11 +229,10 @@ footer {
   padding: 100px;
   }
 
-  .place p{
-    display: flex;
-    justify-content: right;
-
-  }
+.place p{
+  display: flex;
+  justify-content: right;
+}
 
 .bg{
   padding: 3rem 0;
