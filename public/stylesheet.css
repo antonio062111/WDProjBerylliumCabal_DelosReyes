@@ -136,6 +136,7 @@ button:hover{
   transition: transform 0.3s ease;
 }
 
+
 .card:hover {
   transform: scale(1.1);
 }
@@ -147,6 +148,18 @@ button:hover{
   object-fit: cover;
   height: 200px;
 }
+
+#history .history-img {
+  width: 200px !important;     /* ensure square, override generic rule */
+  height: 200px !important;    /* keep height fixed */
+  object-fit: cover;           /* fill the square without distortion */
+  display: block;
+  margin: 0 auto 1rem;         /* center inside the card */
+  border-radius: 6px;
+}
+
+
+
 
 /* Destinations Section */
 .destinations h2 {
