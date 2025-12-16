@@ -111,6 +111,7 @@ button:hover{
   margin: 50px auto;
   border-radius: 15px;
   background-color: whitesmoke;
+  color: #333;
 }
 
 .highlights h2 {
@@ -262,7 +263,6 @@ footer {
 .travelplanner p {
   font-size: 1.2rem;
   margin-top: 1rem;
-  font-weight: bold;
 }
 
 .travelplanner table {
@@ -321,4 +321,16 @@ footer {
 .travelplanner #gt:hover {
   background-color: #a07828;
   scale: 125%;
+}
+
+/*Sources*/
+.container_sources {
+  background: whitesmoke;
+  border-radius: 8px;
+  text-align: left;
+  padding: 3rem;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
