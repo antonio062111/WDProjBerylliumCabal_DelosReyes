@@ -1,6 +1,6 @@
-# Lakbay
+# **Lakbay: Discover Hidden Gems Across the Philippines**
 
-## Discover Hidden Gems Across the Philippines
+## *The Website*
 
 ### Overview
 
@@ -40,5 +40,29 @@ The logo is inspired by the Philippine flag. It features a yellow sun in the cen
 
 ### Wireframe Mockups 
 - ([Canva Link](https://www.canva.com/design/DAG3LDOXUkI/ixpo-hTWTPzFFcBfEbgSTQ/edit?utm_content=DAG3LDOXUkI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton))
+
+<br>
+
+
+## *HTML Form Integration*
+### Purpose
+- **Sign up & Log in** to enter the website and access your data.
+- **Add Travel Wishlist** or select provinces they would like to visit.
+- **User Thoughts and Feedback** about the destinations or the website itself.
+
+### New Webpages
+1. User Access Portal
+    - Title: Lakbay
+    - Purpose: Collect user name, email, password, and travel preferences
+2. Travel Wishlist
+    - Title: Wishlist | Lakbay
+    - Purpose: User selects provinces/attractions they would like to visit or they would just like to add
+3. User Thoughts
+    - Title: Thoughts & Feedback | Lakbay
+    - Purpose: Stores thoughts of user about destinations or even the website itself. Users can also send their feedbacks to an email included in the webpage
+
+### Wireframes Overview
+- ([Canva Link](https://www.canva.com/design/DAG3LDOXUkI/ixpo-hTWTPzFFcBfEbgSTQ/edit?utm_content=DAG3LDOXUkI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton))
+
 
 
