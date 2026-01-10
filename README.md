@@ -62,7 +62,7 @@ The logo is inspired by the Philippine flag. It features a yellow sun in the cen
     - Purpose: Stores thoughts of user about destinations or even the website itself. Users can also send their feedbacks to an email included in the webpage
 
 ### Wireframes Overview
-- ([Canva Link]https://www.canva.com/design/DAG3LDOXUkI/ixpo-hTWTPzFFcBfEbgSTQ/edit?ui=eyJEIjp7IlQiOnsiQSI6IlBCNzM3cGM1YlE5MHFZeGoifX19))
+- ([Canva Link](https://www.canva.com/design/DAG3LDOXUkI/ixpo-hTWTPzFFcBfEbgSTQ/edit?ui=eyJEIjp7IlQiOnsiQSI6IlBCNzM3cGM1YlE5MHFZeGoifX19))
 
 
 
