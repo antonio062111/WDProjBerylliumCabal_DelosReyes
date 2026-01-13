@@ -1,348 +1,349 @@
-
   /* Reset & Base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #eeeeee;
-  color: #333;
-  line-height: 1.6;
-}
-
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-}
-
-/* Header */
-header {
-  background-color: #c48314;
-  padding: 1rem 0;
-  color: white;
-  position: static;
-  top: 0;
-}
-
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative; left: 50px;
-
-}
-
-.logo {
-  font-size: 1.7rem;
-  font-weight: bold;
-  position: relative; left: -180px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  position: relative; left: -80px;
-
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s ease;
-}
-
-.nav-links a:hover {
-  font-size: 1.1rem;
-}
-
-
-/* Hero Section */
-.hero {
-  background: url('https://www.saferide.ph/wp-content/uploads/2021/04/top-10-bohol.jpg') center/cover no-repeat;
-  background-color: rgba(0, 0, 0, 0.3);
-  background-blend-mode: darken;
-  color: white;
-  text-align: center;
-  padding: 4rem 1rem;
- 
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-}
-
-button {
-  padding: 0.75rem 1.5rem;
-  background-color: #484133;
-  border: none;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: 0.3s ease;
-}
-
-button:hover{
-  background-color: #c48314;
-  padding: 1.15rem 2rem;
-}
-
-.hero a{
-  color:white ;
-  text-decoration: none;
-}
-
-/* Highlights Section */ 
-.highlights {
-  padding: 3rem 0;
-  margin: 50px auto;
-  border-radius: 15px;
-  background-color: whitesmoke;
-  color: #333;
-}
-
-.highlights h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-}
-
-.card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  width: 300px;
-  text-align: center;
-  padding: 1rem;
-  transition: transform 0.3s ease;
-}
-
-
-.card:hover {
-  transform: scale(1.1);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-  object-fit: cover;
-  height: 200px;
-}
-
-#history .history-img {
-  width: 200px !important;     /* ensure square, override generic rule */
-  height: 200px !important;    /* keep height fixed */
-  object-fit: cover;           /* fill the square without distortion */
-  display: block;
-  margin: 0 auto 1rem;         /* center inside the card */
-  border-radius: 6px;
-}
-
-
-
-
-/* Destinations Section */
-.destinations h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-}
-
-.card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  width: 300px;
-  text-align: center;
-  padding: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.1);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-  object-fit: cover;
-  height: 200px;
-}
-
-/* Footer */
-footer {
-  background-color: #db9112;
-  color: white;
-  padding: 1rem 0;
-  text-align: center;
-}
-
- 
-.social-icons img {
-  height: 24px;
-  margin: 0 8px;
-}
-
-/* Dividers */
-.divider {
-  display: flex;
-  justify-content: center;
-  margin: 100px;
-}
-
-/* Destinations */
-
-.place {
-
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  padding: 1rem;
-  margin-left: 50px;
-  margin-right: 50px;
-
-}
-
-.place img {
-  display: flex;
-  width: 50%;
-  border-radius: 6px;
-  margin-top: -85px;
-  margin-bottom: 1rem;
-  object-fit: cover;
-  justify-content: left;
-  padding: 100px;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-
-.place p{
-  display: flex;
-  justify-content: right;
-}
-
-.bg{
-  padding: 3rem 0;
-  margin: 50px auto;
-  border-radius: 15px;
-  background-color: whitesmoke;
-}
-
-/* Planner */
-
-.travelplanner {
-  background: whitesmoke;
-  border-radius: 8px;
-  text-align: center;
-  padding: 1rem;
-  margin-left: 200px;
-  margin-right: 200px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.travelplanner h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.travelplanner p {
-  font-size: 1.2rem;
-  margin-top: 1rem;
-}
-
-.travelplanner table {
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%; 
-  justify-content: center ;
-}
-
-.travelplanner th, td {
-  margin-left: auto;
-  margin-right: auto;
-  border: 2px solid black;
-  width: 50%; 
-  justify-content: center ;
-  border-radius: 10px;
-  border-collapse: separate;
-}
-
-.travelplanner input[type="number"] {
-  border-radius: 10px;
-  padding: 5px;
-  border: none;
-  width: 100%;
-}
-
-
-.travelplanner input[type="number"]:focus {
-  outline: none;
   
-}
-
-.travelplanner input[type="button"] {
-  background-color:  #c48314;
-  color: white;
-  border-radius: 10px;
-  padding: 5px;
-  border: none;
-  transition: 0.3s ease;
-}
-
-.travelplanner #gt {
-  background-color:  #c48314;
-  color: white;
-  border-radius: 10px;
-  padding: 15px;
-  border: none;
-  transition: 0.3s ease;
-}
-.travelplanner input[type="button"]:hover {
-  background-color: #a07828;
-  scale: 125%;
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #eeeeee;
+    color: #333;
+    line-height: 1.6;
+  }
   
-}
-
-.travelplanner #gt:hover {
-  background-color: #a07828;
-  scale: 125%;
-}
-
-/*Sources*/
-.container_sources {
-  background: whitesmoke;
-  border-radius: 8px;
-  text-align: left;
-  padding: 3rem;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  /* Header */
+  header {
+    background-color: #c48314;
+    padding: 1rem;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; left: 50px;
+  
+  }
+  
+  .logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    position: relative; 
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    position: relative; left: -80px;
+  
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    font-size: 1.1rem;
+  }
+  
+  
+  /* Hero Section */
+  .hero {
+    background: url('https://www.saferide.ph/wp-content/uploads/2021/04/top-10-bohol.jpg') center/cover no-repeat;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: darken;
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+    background-attachment: fixed;
+   
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  button {
+    padding: 0.75rem 1.5rem;
+    background-color: #484133;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  button:hover{
+    background-color: #c48314;
+    padding: 1.15rem 2rem;
+  }
+  
+  .hero a{
+    color:white ;
+    text-decoration: none;
+  }
+  
+  /* Highlights Section */ 
+  .highlights {
+    padding: 3rem 0;
+    margin: 50px auto;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    color: #333;
+  }
+  
+  .highlights h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  
+  .card:hover {
+    transform: scale(1.1);
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    height: 200px;
+  }
+  
+  #history .history-img {
+    width: 200px !important;     /* ensure square, override generic rule */
+    height: 200px !important;    /* keep height fixed */
+    object-fit: cover;           /* fill the square without distortion */
+    display: block;
+    margin: 0 auto 1rem;         /* center inside the card */
+    border-radius: 6px;
+  }
+  
+  
+  
+  
+  /* Destinations Section */
+  .destinations h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    height: 200px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #db9112;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+   
+  .social-icons img {
+    height: 24px;
+    margin: 0 8px;
+  }
+  
+  /* Dividers */
+  .divider {
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+  }
+  
+  /* Destinations */
+  
+  .place {
+  
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 1rem;
+    margin-left: 50px;
+    margin-right: 50px;
+  
+  }
+  
+  .place img {
+    display: flex;
+    width: 50%;
+    border-radius: 6px;
+    margin-top: -85px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    justify-content: left;
+    padding: 100px;
+    }
+  
+  .place p{
+    display: flex;
+    justify-content: right;
+  }
+  
+  .bg{
+    padding: 3rem 0;
+    margin: 50px auto;
+    border-radius: 15px;
+    background-color: whitesmoke;
+  }
+  
+  /* Planner */
+  
+  .travelplanner {
+    background: whitesmoke;
+    border-radius: 8px;
+    text-align: center;
+    padding: 1rem;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .travelplanner h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .travelplanner p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
+  .travelplanner table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; 
+    justify-content: center ;
+  }
+  
+  .travelplanner th, td {
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    width: 50%; 
+    justify-content: center ;
+    border-radius: 10px;
+    border-collapse: separate;
+  }
+  
+  .travelplanner input[type="number"] {
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    width: 100%;
+  }
+  
+  
+  .travelplanner input[type="number"]:focus {
+    outline: none;
+    
+  }
+  
+  .travelplanner input[type="button"] {
+    background-color:  #c48314;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    transition: 0.3s ease;
+  }
+  
+  .travelplanner #gt {
+    background-color:  #c48314;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    border: none;
+    transition: 0.3s ease;
+  }
+  .travelplanner input[type="button"]:hover {
+    background-color: #a07828;
+    scale: 125%;
+    
+  }
+  
+  .travelplanner #gt:hover {
+    background-color: #a07828;
+    scale: 125%;
+  }
+  
+  /*Sources*/
+  .container_sources {
+    background: whitesmoke;
+    border-radius: 8px;
+    text-align: left;
+    padding: 3rem;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
