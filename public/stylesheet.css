@@ -23,9 +23,10 @@
     background-color: #c48314;
     padding: 1rem;
     color: white;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
+    z-index: 1000000000000000000; /* Ensures header stays on top of other elements */
   }
   
   
@@ -47,7 +48,7 @@
     list-style: none;
     display: flex;
     gap: 1.5rem;
-    position: relative; left: -80px;
+    position: relative; 
   
   }
   
