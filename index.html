@@ -7,28 +7,18 @@
   <title>Home | Lakbay</title>
   <link rel="icon" href="assets/lakbay_logo_v3/lakbay_logov3_icon.png" type="image/png"/>
 </head>
+
 <body>
+  <form method="post" action="submit" 
+    onsubmit="return confirm('Do you want to submit this application?');" 
+    onreset="return confirm('Do you really want to reset the form?');">
   <header>
     <div class="container nav-container">
-      <a href="index.html">
+      <a href="home.html">
         <img src="assets/lakbay_logo_v3/lakbay_logov3_light.png" width="60" alt="Lakbay Logo"/>
       </a>
       
-      <nav>
-        <ul class="nav-links">
-          
-          <li><a href="index.html">Home</a></li>
-          <li><a href="public/destinations.html">Destinations</a></li>
-          <li><a href="public/culture&traditions.html">Culture & Traditions</a></li>
-          <li><a href="public/planner.html">Planner</a></li>
-          <li><a href="public/wishlist.html">Wishlist</a></li>
-          <li><a href="public/feedback.html">Thoughts & Feedback</a></li>
-          <li><a href="public/about.html">About</a></li>
-          <li><a href="public/sources.html">Sources</a></li>
-
-
-        </ul>
-      </nav>
+      
     </div>
   </header>
   <main>
@@ -36,16 +26,32 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <h1>Discover hidden gems across the Philippines</h1>
+        <h1>Welcome to Lakbay!</h1>
         <p>Explore local destinations, traditions, and travel tips about Filipino culture.</p>
-        <button onclick="window.location"> <a href="public/destinations.html"> Explore Now </a></button>
+        <section id="highlights" class="container highlights">
+          <label>
+            Username:
+            <input type="text" name="user" required onblur="check(this)">
+          </label>
+          <label>
+            Password:
+            <input type="password" name="pw" required onblur="check(this)">
+          </label><br>
+          
+          <!-- buttons -->
+          <button onclick="window.location" type="submit"> <a href="home.html"> Sign up / Login </a></button>
+          <button onclick="window.location" type="reset"> Reset </button>
+          
+          <form method="post" action="submit" 
+            onsubmit="return confirm('Do you want to submit this application?');" 
+            onreset="return confirm('Do you really want to reset the form?');">
+          
+        </section>
       </div>
 
     <!-- Highlights -->
     <section id="highlights" class="container highlights">
       <h2>Featured Destinations</h2>
-      <p>Welcome to Lakbay, your friendly travel website here to assist and educate you for your travel needs. Click "Explore Now" above to learn more!</p>
-      <p>Below are some of our featured destinations in this website. Click culture and traditions to learn more about these places and more!</p><br>
       <div class="cards">
 
         <div class="card">
@@ -90,5 +96,14 @@
     </div>
   </footer>
   <script src="js/script.js"></script>
+  <script>
+    function check(field) {
+      if (!field.value.trim()) {
+        field.classList.add("error");
+      } else {
+        field.classList.remove("error");
+      }
+    }
+    </script>
 </body>
 </html>
