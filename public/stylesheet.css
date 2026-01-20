@@ -1,4 +1,4 @@
-  /* Reset & Base */
+/* Reset & Base */
   * {
     margin: 0;
     padding: 0;
@@ -18,9 +18,9 @@
     margin: auto;
   }
   
-  /* Header */
+/* Header */
   header {
-    background-color: #c48314;
+    background-color: #db9112;
     padding: 1rem;
     color: white;
     position: sticky;
@@ -35,7 +35,6 @@
     justify-content: space-between;
     align-items: center;
     position: sticky; left: 50px;
-  
   }
   
   .logo {
@@ -64,7 +63,7 @@
   }
   
   
-  /* Hero Section */
+/* Hero Section */
   .hero {
     background: url('https://www.saferide.ph/wp-content/uploads/2021/04/top-10-bohol.jpg') center/cover no-repeat;
     background-color: rgba(0, 0, 0, 0.3);
@@ -107,7 +106,7 @@
     text-decoration: none;
   }
   
-  /* Highlights Section */ 
+/* Highlights Section */ 
   .highlights {
     padding: 3rem 0;
     margin: 50px auto;
@@ -163,7 +162,7 @@
   
   
   
-  /* Destinations Section */
+/* Destinations Section */
   .destinations h2 {
     text-align: center;
     margin-bottom: 2rem;
@@ -198,7 +197,7 @@
     height: 200px;
   }
   
-  /* Footer */
+/* Footer */
   footer {
     background-color: #db9112;
     color: white;
@@ -206,23 +205,20 @@
     text-align: center;
   }
   
-   
   .social-icons img {
     height: 24px;
     margin: 0 8px;
   }
   
-  /* Dividers */
+/* Dividers */
   .divider {
     display: flex;
     justify-content: center;
     margin: 100px;
   }
   
-  /* Destinations */
-  
+/* Destinations */
   .place {
-  
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -230,7 +226,6 @@
     padding: 1rem;
     margin-left: 50px;
     margin-right: 50px;
-  
   }
   
   .place img {
@@ -256,8 +251,7 @@
     background-color: whitesmoke;
   }
   
-  /* Planner */
-  
+/* Planner */
   .travelplanner {
     background: whitesmoke;
     border-radius: 8px;
@@ -336,8 +330,24 @@
     background-color: #a07828;
     scale: 125%;
   }
+
+/*Log in*/
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
   
-  /*Sources*/
+  input, select, textarea {
+      width: 30%;
+      height: 3%;
+      padding: 2px;
+      margin-top: 4px;
+      border: 1px solid #ccc;
+      border-radius: 100px;
+      color:#1b1919
+  }
+  
+/*Sources*/
   .container_sources {
     background: whitesmoke;
     border-radius: 8px;
