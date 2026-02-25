@@ -9,15 +9,9 @@
 </head>
 
 <body>
-  <form method="post" action="submit" 
-    onsubmit="return confirm('Do you want to submit this application?');" 
-    onreset="return confirm('Do you really want to reset the form?');">
   <header>
     <div class="container nav-container">
       <img src="assets/lakbay_logo_v3/lakbay_logov3_light.png" width="60" alt="Lakbay Logo"/>
-      
-      
-      
     </div>
   </header>
   <main>
@@ -28,22 +22,24 @@
         <h1>Welcome to Lakbay!</h1>
         <p>Explore local destinations, traditions, and travel tips about Filipino culture.</p>
         <section id="highlights" class="container highlights">
-          <label>
-            Username:
-            <input type="text" name="user" required onblur="check(this)">
-          </label>
-          <label>
-            Password:
-            <input type="password" name="pw" required onblur="check(this)">
-          </label><br>
+
+          <form id="loginForm" method="post" action="submit"
+            onsubmit="return confirm('Have you reviewed the form before submitting?')"
+            onreset="return confirm('Are you sure you want to reset the form?')">
+            <label> Username:
+              <input class="login" type="text" id="username" name="username" placeholder="Username" onblur="check(this)"/><br>
+            </label>
+
+            <label> Password:
+              <input class="login" type="password" name="password" placeholder="Password" onblur="check(this)"/><br>
+            </label>
+            
+            <input id="loginsubmit" type="submit" value="Submit">
+            <input id="loginreset" type="reset" value="Reset">
+          </form>
+            
+        
           
-          <!-- buttons -->
-          <button onclick="window.location.href='home.html'" type="submit"> Sign up / Login </button>
-          <button onclick="window.location" type="reset"> Reset </button>
-          
-          <form method="post" action="submit" 
-            onsubmit="return confirm('Do you want to submit this application?');" 
-            onreset="return confirm('Do you really want to reset the form?');">
           
         </section>
       </div>
@@ -94,15 +90,35 @@
       </div>
     </div>
   </footer>
-  <script src="js/script.js"></script>
   <script>
-    function check(field) {
-      if (!field.value.trim()) {
-        field.classList.add("error");
-      } else {
-        field.classList.remove("error");
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      
+    //ssaves the user inputs into respective variables
+      const userName = document.getElementById("username").value;
+      
+
+    //sets the key to be used in storing as the club name
+      let Key = userName; 
+    
+    //checks for existing matching keys already saved in local storage. creates an empty array if none found.
+      let userList = JSON.parse(localStorage.getItem(Key)) || [];
+
+    //organanizes the data to be ready for storage
+      const newSignup = {
+        userName,
+      };
+
+      if (userList.length === 0) {
+      userList.push(newSignup);
+      localStorage.setItem(Key, JSON.stringify(userList));
       }
-    }
-    </script>
+
+      localStorage.setItem("currentUser", userName);
+      window.location.href = "home.html";
+    })
+    
+  </script>
+  
 </body>
 </html>

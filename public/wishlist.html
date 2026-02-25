@@ -65,6 +65,7 @@
             <td>*place button here*</td>
         </tr>
     </table>
+    <p id="test">6</p>
   </section>
 
 
@@ -90,7 +91,11 @@
       </div>
     </div>
   </footer>
-  <script src="js/script.js"></script>
+  <script>
+    currentuser = localStorage.getItem("currentUser");
+    const userData = JSON.parse(localStorage.getItem(currentuser)); // this is an array
+    
+  </script>
 </body>
 </html>
 

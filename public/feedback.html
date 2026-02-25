@@ -33,41 +33,71 @@
     <section class="hero">
       <div class="container">
         <h1>Thoughts & Feedback</h1>
-        <p>Share your thoughts and feedback about Lakbay</p>
+        <p>Add your thoughts and feedback about Lakbay</p>
       </div>
     </section>
 
-   
     <section id="culture" class="travelplanner">
       <h2>Send us your feedback!</h2>
-      <p>We value your opinion! Please share your thoughts, suggestions, or concerns about Lakbay.</p>
-      
-     
+      <p>We value your opinion! Please share your thoughts, suggestions, or concerns about Lakbay.</p><br>
+
+      <form id="feedbackform" method="post">
+        <textarea class="feedback" name="feedback" rows="10" cols="80" placeholder="Enter your feedback here..."></textarea>
+        <button type="submit">Submit feedback</button>
+      </form>
+
+      <h3>Previous Feedback</h3>
+      <ul id="feedbackList"></ul>
     </section>
   </main>
 
   <footer>
     <div class="footer-content">
       <div class="rights">
-      <p><strong><small>Sources:</small></strong></p>
-      <ul><small>
-        <li>Saferide. (2023, September 5). Top 10 Attractions in Bohol: Exploring the Beautiful Island » saferide.ph. Saferide Car Rental. https://www.saferide.ph/top-10-attractions-in-bohol/</li>
-        <li>Reyes, A. R. (n.d.). Sunken Cemetery. Flickr. https://www.flickr.com/photos/agustinrafaelreyes/4158849583</li>
-        <li>Romblon Island: the untouched Philippine paradise for diving, snorkeling & marine biodiversity. (n.d.). Bold Traveller. https://boldtraveller.ca/trip-ideas/romblon-island-the-philippines-newest-paradise/</li>
-        <li>Van ’t Veld, E. (2022, November 17). Travel Guide to Siquijor Island, Philippines - Erika's Travelventures. Erika’s Travelventures. https://www.erikastravelventures.com/guide-to-siquijor-island/</li>
-        <li>Revisiting Tawi Tawi’s wonderful sights and culture. (2022, July 26). Nomadic Experiences. https://www.nomadicexperiences.com/2022/07/revisiting-tawi-tawis-wonderful-sights.html</li>
-        <li>Erine, D. (n.d.). Bukidnon Highlands: the Switzerland of Mindanao. Delightful Philippines. https://www.delightful.ph/blog/category/240/bukidnon/post/1590/bukidnon-highlands-the-switzerland-of-mindanao</li>
-      </small></ul>
-      
-      <br><p>&copy; 2025 Lakbay. All rights reserved.</p><br>
-      <div class="social-icons">
-        <a href="https://github.com/antonio062111/WDProjBerylliumCabal_DelosReyes"><img src="../assets/github-mark-white.png" alt="GitHub Page" /></a>
-        <a href="https://www.instagram.com/tayomaglakbay/?hl=en"><img src="../assets/instagram-logo.avif" alt="Instagram" /></a>
-      </div>
+        <p>&copy; 2025 Lakbay. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="https://github.com/antonio062111/WDProjBerylliumCabal_DelosReyes"><img src="../assets/github-mark-white.png" alt="GitHub Page" /></a>
+          <a href="https://www.instagram.com/tayomaglakbay/?hl=en"><img src="../assets/instagram-logo.avif" alt="Instagram" /></a>
+        </div>
       </div>
     </div>
   </footer>
-  <script src="js/script.js"></script>
+
+
+  <script>
+    const form = document.getElementById("feedbackform");
+    const feedbackList = document.getElementById("feedbackList");
+
+    // load saved feedback on page load
+    window.onload=function(){
+      const savedFeedback=JSON.parse(localStorage.getItem("feedbacks"))||[];
+      savedFeedback.forEach(item=>{
+        const li=document.createElement("li");
+        li.textContent=item;
+        feedbackList.appendChild(li);
+      });
+    };
+
+    // handle form submission
+    form.addEventListener("submit",function(event){
+      event.preventDefault();
+      const feedbackText=form.feedback.value.trim();
+
+      if (feedbackText) {
+        // save to localStorage
+        let feedbacks=JSON.parse(localStorage.getItem("feedbacks"))||[];
+        feedbacks.push(feedbackText);
+        localStorage.setItem("feedbacks",JSON.stringify(feedbacks));
+
+        // display immediately
+        const li=document.createElement("li");
+        li.textContent=feedbackText;
+        feedbackList.appendChild(li);
+
+        alert("Thank you for your feedback!");
+        form.reset();
+      }
+    });
+  </script>
 </body>
 </html>
-
