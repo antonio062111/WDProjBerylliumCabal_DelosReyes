@@ -39,33 +39,52 @@
     </section>
   </main>
 
-  <section class="travelplanner" >
-    <h2>Your Wishlist</h2>
+  <section class="travelplanner">
+    <h2>Your Wishlist <span class="heart">❤</span></h2>
     <p>Here are the destinations you've added to your wishlist. Start planning your next adventure!</p>
     <br>
-    <table>
-        <tr>
-            <td>Camiguin</td>
-            <td>*place button here*</td>
-        </tr>
-        <tr>
-            <td>Camiguin</td>
-            <td>*place button here*</td>
-        </tr>
-        <tr>
-            <td>Camiguin</td>
-            <td>*place button here*</td>
-        </tr>
-        <tr>
-            <td>Camiguin</td>
-            <td>*place button here*</td>
-        </tr>
-        <tr>
-            <td>Camiguin</td>
-            <td>*place button here*</td>
-        </tr>
-    </table>
-    <p id="test">6</p>
+    
+    <div class="wishlistDestinations">
+      <div class="wishlistCard">
+        <h3>Camiguin</h3>
+        <input type="checkbox" id="camiguinCheck" value="Camiguin">
+        <p>Island born of fire, volcanic landscapes and the Lanzones Festival</p>
+        <img src="../assets/places pics/camiguin.png" alt="Camiguin" />
+      </div>
+
+      <br>
+      <div class="wishlistCard">
+        <h3>Romblon</h3>
+        <input type="checkbox" id="romblonCheck" value="Romblon">
+        <p>Untouched Philippine paradise for diving, snorkeling & marine biodiversity</p>
+        <img src="../assets/places pics/romblon.png" alt="Romblon" />
+      </div>
+
+      <br>
+      <div class="wishlistCard">
+        <h3>Siquijor</h3>
+        <input type="checkbox" id="siquijorCheck" value="Siquijor">
+         <p>Enchanted island of mysticism, waterfalls, and pristine beaches</p>
+        <img src="../assets/places pics/siquijor.png" alt="Siquijor" />
+      </div>
+
+      <br>
+      <div class="wishlistCard">
+        <h3>Tawi-Tawi</h3>
+        <input type="checkbox" id="tawiTawiCheck" value="Tawi-Tawi">
+        <p>Southernmost province with rich culture, stunning islands, and vibrant marine life</p>
+        <img src="../assets/places pics/tawi-tawi.png" alt="Tawi-Tawi" />
+      </div>
+
+      <br>
+      <div class="wishlistCard">
+        <h3>Bukidnon</h3>
+        <input type="checkbox" id="bukidnonCheck" value="Bukidnon">
+        <p>Switzerland of Mindanao with cool climate, lush landscapes, and adventure activities</p> 
+        <img src="../assets/places pics/bukidnon.png" alt="Bukidnon" />
+      </div>
+
+      <button onclick="saveWishList()">Save Wishlist</button>
   </section>
 
 
@@ -93,7 +112,32 @@
   </footer>
   <script>
     currentuser = localStorage.getItem("currentUser");
-    const userData = JSON.parse(localStorage.getItem(currentuser)); // this is an array
+   
+    function saveWishList() {
+      const wishlist = [];
+      if (document.getElementById("camiguinCheck").checked) {
+        wishlist.push("Camiguin");
+      }
+      if (document.getElementById("romblonCheck").checked) {
+        wishlist.push("Romblon");
+      }
+      if (document.getElementById("siquijorCheck").checked) {
+        wishlist.push("Siquijor");
+      }
+      if (document.getElementById("tawiTawiCheck").checked) {
+        wishlist.push("Tawi-Tawi");
+      }
+      if (document.getElementById("bukidnonCheck").checked) {
+        wishlist.push("Bukidnon");
+      }
+      
+      let users = JSON.parse(localStorage.getItem("users")) || {};
+      let currentUser = localStorage.getItem("currentUser");
+      users[currentUser].wishlist = wishlist;
+      localStorage.setItem("users", JSON.stringify(users));
+      alert("Wishlist saved!");
+    }
+
     
   </script>
 </body>

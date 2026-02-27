@@ -94,25 +94,22 @@
     document.getElementById("loginForm").addEventListener("submit", function(e) {
       e.preventDefault();
       
-    //ssaves the user inputs into respective variables
       const userName = document.getElementById("username").value;
       
+      //checks for existing matching keys already saved in local storage. creates an empty array if none found.
+     let users = JSON.parse(localStorage.getItem("users")) || {};
 
-    //sets the key to be used in storing as the club name
-      let Key = userName; 
-    
-    //checks for existing matching keys already saved in local storage. creates an empty array if none found.
-      let userList = JSON.parse(localStorage.getItem(Key)) || [];
+    if (users === null) {
+        users = {};
+    }
 
-    //organanizes the data to be ready for storage
-      const newSignup = {
-        userName,
-      };
+    if (users[userName] === undefined) {
+        users[userName] = {
+            wishlist: []
+        };
 
-      if (userList.length === 0) {
-      userList.push(newSignup);
-      localStorage.setItem(Key, JSON.stringify(userList));
-      }
+        localStorage.setItem("users", JSON.stringify(users));
+    }
 
       localStorage.setItem("currentUser", userName);
       window.location.href = "home.html";
