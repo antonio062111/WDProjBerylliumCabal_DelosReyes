@@ -40,9 +40,11 @@
   </main>
 
   <section class="travelplanner">
-    <h2>Your Wishlist <span class="heart">❤</span></h2>
-    <p>Here are the destinations you've added to your wishlist. Start planning your next adventure!</p>
-    <br>
+    <br><h2>Your Wishlist <span class="heart">❤</span></h2>
+    <p>The ticked locations are the destinations you've added to your wishlist. Start planning your next adventure!</p>
+    <p style="font-size: 14px;">Click the "Save Wishlist" button to save your selections. Your wishlist will be saved even if you leave the page, so you can come back anytime to review or update it.</p><br>
+    <h5>Note: Make sure to be logged in to save your wishlist.</h5>
+    <br><br>
     
     <div class="wishlistDestinations">
       <div class="wishlistCard">
@@ -133,12 +135,33 @@
       
       let users = JSON.parse(localStorage.getItem("users")) || {};
       let currentUser = localStorage.getItem("currentUser");
-      users[currentUser].wishlist = wishlist;
-      localStorage.setItem("users", JSON.stringify(users));
+
+      // make sure user object exists before assigning wishlist
+      if(!users[currentUser]){
+        users[currentUser]={};
+      }
+      users[currentUser].wishlist=wishlist;
+      localStorage.setItem("users",JSON.stringify(users));
       alert("Wishlist saved!");
+      //load changes immediately
+      loadWishList();
     }
 
-    
+    function loadWishList(){
+      let users = JSON.parse(localStorage.getItem("users"))||{};
+      let currentUser = localStorage.getItem("currentUser");
+      if(users && currentUser && users[currentUser] && users[currentUser].wishlist) {
+        const wishlist=users[currentUser].wishlist;
+        document.getElementById("camiguinCheck").checked=wishlist.includes("Camiguin");
+        document.getElementById("romblonCheck").checked=wishlist.includes("Romblon");
+        document.getElementById("siquijorCheck").checked=wishlist.includes("Siquijor");
+        document.getElementById("tawiTawiCheck").checked=wishlist.includes("Tawi-Tawi");
+        document.getElementById("bukidnonCheck").checked=wishlist.includes("Bukidnon");
+      }
+    }
+
+    // initialise state when page loads
+    window.addEventListener('DOMContentLoaded',loadWishList);
   </script>
 </body>
 </html>
