@@ -28,9 +28,10 @@
     padding: 20px 60px;
     position: sticky;
     top: 0;
-    background: rgba(255,99,71,0.4);
-    backdrop-filter: blur(8px); 
+    background: rgba(253, 75, 43, 0.741);
+    backdrop-filter: blur(4px); 
     z-index: 2000;
+    outline: 2px solid #ffffff;
   }
   
   
@@ -142,6 +143,11 @@
     transition: transform 0.3s ease;
   }
   
+  .card a {
+    color: white;                /* Changes color to white */
+    font-size: 0.8em;            /* Makes text smaller (adjust as needed) */
+    font-weight: bold;    /* Makes the text bold */
+  }
   
   .card:hover {
     transform: scale(1.1);
@@ -210,6 +216,7 @@
     color: white;
     padding: 1rem 0;
     text-align: center;
+    outline: 2px solid #ffffff;
   }
   
   .social-icons img {
