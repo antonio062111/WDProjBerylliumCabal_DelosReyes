@@ -24,18 +24,17 @@
         <section id="highlights" class="container highlights">
 
           <form id="loginForm" method="post" action="submit"
-            onsubmit="return confirm('Have you reviewed the form before submitting?')"
-            onreset="return confirm('Are you sure you want to reset the form?')">
+            onsubmit="return confirm('Ready to explore?')">
             <label> Username:
-              <input class="login" type="text" id="username" name="username" placeholder="Username" onblur="check(this)"/><br>
+              <input class="login" type="text" id="username" name="username" placeholder="Username" required onblur="check(this)"/><br>
             </label>
 
             <label> Password:
-              <input class="login" type="password" name="password" placeholder="Password" onblur="check(this)"/><br>
+              <input class="login" type="password" name="password" placeholder="Password" required onblur="check(this)"/><br>
             </label>
             
             <input id="loginsubmit" type="submit" value="Submit">
-            <input id="loginreset" type="reset" value="Reset">
+            <input id="loginreset" type="reset" value="Cancel">
           </form>
             
         
@@ -94,7 +93,7 @@
     document.getElementById("loginForm").addEventListener("submit", function(e) {
       e.preventDefault();
       
-      const userName = document.getElementById("username").value;
+      const userName = document.getElementById("username").value.trim();
       
       //checks for existing matching keys already saved in local storage. creates an empty array if none found.
      let users = JSON.parse(localStorage.getItem("users")) || {};

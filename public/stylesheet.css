@@ -6,10 +6,11 @@
   }
   
   body {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                url('https://www.saferide.ph/wp-content/uploads/2021/04/top-10-bohol.jpg') center/cover no-repeat;
     font-family: 'Segoe UI', sans-serif;
-    background-color: #eeeeee;
-    color: #333;
     line-height: 1.6;
+    background-attachment: fixed;
   }
   
   .container {
@@ -20,13 +21,16 @@
   
 /* Header */
   header {
-    background-color: #db9112;
     padding: 1rem;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
     position: sticky;
     top: 0;
-    width: 100%;
-    z-index: 1000000000000000000; /* Ensures header stays on top of other elements */
+    background: rgba(255,99,71,0.4);
+    backdrop-filter: blur(8px); 
+    z-index: 2000;
   }
   
   
@@ -65,13 +69,9 @@
   
 /* Hero Section */
   .hero {
-    background: url('https://www.saferide.ph/wp-content/uploads/2021/04/top-10-bohol.jpg') center/cover no-repeat;
-    background-color: rgba(0, 0, 0, 0.3);
-    background-blend-mode: darken;
     color: white;
     text-align: center;
     padding: 4rem 1rem;
-    background-attachment: fixed;
    
   }
   
@@ -87,7 +87,9 @@
   
   button, #loginsubmit, #loginreset {
     padding: 0.75rem 1.5rem;
-    background-color: #484133;
+    background: rgba(255,99,71,0.4);
+    backdrop-filter: blur(8px); 
+    outline: 2px solid white;
     border: none;
     color: white;
     font-size: 1rem;
@@ -99,6 +101,7 @@
   button:hover, #loginsubmit:hover, #loginreset:hover {
     background-color: #c48314;
     padding: 1.15rem 2rem;
+    outline: 0px
   }
   
   .hero a{
@@ -108,14 +111,16 @@
   
 /* Highlights Section */ 
   .highlights {
+    background: rgba(255,99,71,0.4);
+    backdrop-filter: blur(8px); 
     padding: 3rem 0;
     margin: 50px auto;
     border-radius: 15px;
-    background-color: whitesmoke;
-    color: #333;
+    color: #ffffff;
   }
   
   .highlights h2 {
+    color: white;
     text-align: center;
     margin-bottom: 2rem;
   }
@@ -176,7 +181,8 @@
   }
   
   .card {
-    background: white;
+    outline: 2px solid #ffffff;
+    background: rgba(197, 183, 180, 0.175);
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     width: 300px;
@@ -199,7 +205,8 @@
   
 /* Footer */
   footer {
-    background-color: #db9112;
+    background: rgba(255,99,71,0.4);
+    backdrop-filter: blur(8px); 
     color: white;
     padding: 1rem 0;
     text-align: center;
@@ -253,7 +260,8 @@
   
 /* Planner */
   .travelplanner {
-    background: whitesmoke;
+    background: rgba(255,99,71,0.4);
+    backdrop-filter: blur(8px); 
     border-radius: 8px;
     text-align: center;
     padding: 1rem;
@@ -261,6 +269,7 @@
     margin-right: 200px;
     margin-top: 50px;
     margin-bottom: 50px;
+    color: white
   }
   
   .travelplanner h2 {
@@ -349,7 +358,9 @@
   
 /*Sources*/
   .container_sources {
-    background: whitesmoke;
+    background: rgba(255,99,71,0.4);
+    backdrop-filter: blur(8px); 
+    color:white;
     border-radius: 8px;
     text-align: left;
     padding: 3rem;
