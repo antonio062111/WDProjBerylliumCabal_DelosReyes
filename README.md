@@ -68,14 +68,10 @@ The logo is inspired by the Philippine flag. It features a yellow sun in the cen
 ---
 <br>
 
-### Final Modification
+### Final Modification Proposal
 
 ### Plan
  - Edit our Q3 work which already utilizes create and read in the "Thoughts & Feedback" webpage to have an option to update current entries as well as add a button to delete said entries.
-
-
-
-
 
 ### Wireframes Overview
 - ([Canva Link (slide 12 onwards)](https://www.canva.com/design/DAG3LDOXUkI/ixpo-hTWTPzFFcBfEbgSTQ/edit?ui=eyJEIjp7IlQiOnsiQSI6IlBCNzM3cGM1YlE5MHFZeGoifX19))
