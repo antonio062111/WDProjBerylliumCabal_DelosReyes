@@ -1,6 +1,6 @@
 # **Lakbay: Discover Hidden Gems Across the Philippines**
 
-## *The Website*
+## The Website
 
 ### Overview
 
@@ -36,15 +36,16 @@ The logo is inspired by the Philippine flag. It features a yellow sun in the cen
 - **Travel Planner Page**: A calculator where you input certain travel expenses and will output the total cost of the trip.
 - **Destinations Page**: Interactive map with clickable regions and pop-up info cards.
 
----
-
 ### Wireframe Mockups 
 - ([Canva Link](https://www.canva.com/design/DAG3LDOXUkI/ixpo-hTWTPzFFcBfEbgSTQ/edit?utm_content=DAG3LDOXUkI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton))
+
+---
 
 <br>
 
 
-## *HTML Form Integration*
+### HTML Form Integration
+
 ### Purpose
 - **Sign up & Log in** to enter the website and access your data.
 - **Add Travel Wishlist** or select provinces they would like to visit.
@@ -63,6 +64,57 @@ The logo is inspired by the Philippine flag. It features a yellow sun in the cen
 
 ### Wireframes Overview
 - ([Canva Link](https://www.canva.com/design/DAG3LDOXUkI/ixpo-hTWTPzFFcBfEbgSTQ/edit?ui=eyJEIjp7IlQiOnsiQSI6IlBCNzM3cGM1YlE5MHFZeGoifX19))
+
+---
+<br>
+
+### Final Modification
+
+### Plan
+ - Edit our Q3 work which already utilizes create and read in the "Thoughts & Feedback" webpage to have an option to update current entries as well as add a button to delete said entries.
+
+
+
+
+
+### Wireframes Overview
+- ([Canva Link (slide 12 onwards)](https://www.canva.com/design/DAG3LDOXUkI/ixpo-hTWTPzFFcBfEbgSTQ/edit?ui=eyJEIjp7IlQiOnsiQSI6IlBCNzM3cGM1YlE5MHFZeGoifX19))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
