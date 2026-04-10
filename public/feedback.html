@@ -75,8 +75,23 @@
     window.onload=function(){
       const savedFeedback=JSON.parse(localStorage.getItem("feedbacks"))||[];
       savedFeedback.forEach(item=>{
-        const li=document.createElement("li");
-        li.textContent=item;
+      const li=document.createElement("li");
+      li.textContent=item;
+
+      const deletebutton=document.createElement("button");
+      deletebutton.addEventListener("click",function(){
+      feedbackList.removeChild(li);
+      let feedbacks=JSON.parse(localStorage.getItem("feedbacks"))||[];
+      feedbacks=feedbacks.filter(feedback=>feedback!==item);
+      localStorage.setItem("feedbacks",JSON.stringify(feedbacks));
+      });
+
+        deletebutton.textContent="Delete";
+        deletebutton.style.marginLeft="10px";
+        deletebutton.style.padding="5px";
+        deletebutton.style.backgroundColor="red";
+        deletebutton.style.outline="none";
+        li.appendChild(deletebutton);
         feedbackList.appendChild(li);
       });
     };
