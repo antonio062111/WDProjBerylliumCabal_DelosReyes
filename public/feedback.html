@@ -50,7 +50,7 @@
       </form><br><br>
 
       <h3>Previous Feedback</h3>
-      <ul id="feedbackList"></ul><br><br>
+      <ul id="feedbackList" style="list-style-type: none;"></ul><br><br>
     </section>
   </main>
 
@@ -91,6 +91,7 @@
         let feedbacks=JSON.parse(localStorage.getItem("feedbacks"))||[];
         feedbacks=feedbacks.map(feedback=>feedback===item?newFeedback:feedback);
         localStorage.setItem("feedbacks",JSON.stringify(feedbacks));
+        location.reload();
       }
       });
 
@@ -109,6 +110,7 @@
       feedbacks=feedbacks.filter(feedback=>feedback!==item);
       localStorage.setItem("feedbacks",JSON.stringify(feedbacks));
       alert("Are you sure? This action cannot be undone.");
+      location.reload();
       });
 
         deletebutton.textContent="Delete";
