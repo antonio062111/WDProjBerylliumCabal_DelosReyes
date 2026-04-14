@@ -40,6 +40,17 @@
     justify-content: space-between;
     align-items: center;
     position: sticky; left: 50px;
+    overflow:hidden;
+    white-space:wrap;
+  }
+
+  .nav-container.li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; left: 50px;
+    overflow:hidden;
+    white-space:wrap;
   }
   
   .logo {
@@ -279,6 +290,9 @@
     margin-bottom: 50px;
     color: white;
     outline: 1px solid #ffffff;
+    overflow:hidden;
+    white-space:wrap;
+    
   }
   
   .travelplanner h2 {
@@ -363,7 +377,7 @@
       margin-top: 4px;
       border: 1px solid #ccc;
       border-radius: 100px;
-      color:#1b1919
+      color:#1b1919;
   }
   
 /*Sources*/
