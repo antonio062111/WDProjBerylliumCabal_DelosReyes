@@ -21,7 +21,7 @@
   
 /* Header */
   header {
-    padding: 1rem;
+    padding: .5rem;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -62,8 +62,13 @@
   .nav-links {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
-    position: relative;   
+    gap: 1rem;
+    position: relative; 
+    flex-wrap: wrap;
+    line-height: 10px;
+    padding: 0px 50px;
+    margin-bottom: 2%;
+    margin-top: 2%;
   }
   
   .nav-links a {
@@ -284,8 +289,8 @@
     border-radius: 8px;
     text-align: center;
     padding: 1rem;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 20%;
+    margin-right: 20%;
     margin-top: 50px;
     margin-bottom: 50px;
     color: white;
@@ -396,7 +401,7 @@
   }
 
   /*Feedback*/
-  textarea.feedback {
+  textarea.notes {
     width: 100%;
     height: 150px;
     padding: 10px;

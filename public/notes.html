@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="stylesheet.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thoughts & Notes | Lakbay</title>
+  <link rel="icon" href="../assets/lakbay_logo_v3/lakbay_logov3_icon.png" type="image/png" />
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <a href="../home.html">
+        <img src="../assets/lakbay_logo_v3/lakbay_logov3_light.png" width="60" alt="Lakbay Logo"/>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../home.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="culture&traditions.html">Culture & Traditions</a></li>
+          <li><a href="planner.html">Planner</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="notes.html">Thoughts & Notes</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="sources.html">Sources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>Thoughts & Notes</h1>
+        <p>Add your thoughts and notes about Lakbay</p>
+      </div>
+    </section>
+
+    <section id="culture" class="travelplanner">
+      <br><h2>Put your thoughts & notes!</h2>
+      <p>Add your thoughts, suggestions, or concerns about Lakbay.</p>
+      <p style="font-size: 14px;">Click the "Submit Notes" button to save your notes. Your notes will be saved even if you leave the page, so you can come back anytime to review or update it.</p><br>
+      <h5>Note: Make sure to be logged in to save your notes.</h5>
+      <br><br>
+
+      <form id="notesform" method="post">
+        <textarea class="notes" name="notes" rows="10" cols="80" placeholder="Enter your notes here..."></textarea>
+    
+        <button type="submit">Submit notes</button>
+      </form><br><br>
+      <h3>Previous Notes</h3>
+      <ul id="notesList" style="list-style-type: none;"></ul><br><br>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="rights">
+        <p>&copy; 2025 Lakbay. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="https://github.com/antonio062111/WDProjBerylliumCabal_DelosReyes"><img src="../assets/github-mark-white.png" alt="GitHub Page" /></a>
+          <a href="https://www.instagram.com/tayomaglakbay/?hl=en"><img src="../assets/instagram-logo.avif" alt="Instagram" /></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    const form = document.getElementById("notesform");
+    const notesList = document.getElementById("notesList");
+
+    // load saved notes on page load
+    window.onload = function () {
+        const savedNotes = JSON.parse(localStorage.getItem("notess")) || [];
+        savedNotes.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = item;
+
+            // edit button for each notes item
+            const editbutton = document.createElement("button");
+            editbutton.addEventListener("click", function () {
+                const newNotes = prompt("Edit your notes:", item);
+                if (newNotes) {
+                    li.firstChild.textContent = newNotes;
+                    let notess = JSON.parse(localStorage.getItem("notess")) || [];
+                    notess = notess.map(notes => notes === item ? newNotes : notes);
+                    localStorage.setItem("notess", JSON.stringify(notess));
+                    location.reload();
+                }
+            });
+
+            editbutton.textContent = "Edit";
+            editbutton.style.marginLeft = "10px";
+            editbutton.style.padding = "5px";
+            editbutton.style.backgroundColor = "grey";
+            editbutton.style.outline = "none";
+            li.appendChild(editbutton);
+
+            // delete button for each notes item
+            const deletebutton = document.createElement("button");
+            deletebutton.addEventListener("click", function () {
+                const confirmDelete = confirm("Are you sure you want to delete this note? This action cannot be undone.");
+                if (confirmDelete) {
+                    notesList.removeChild(li);
+                    let notess = JSON.parse(localStorage.getItem("notess")) || [];
+                    notess = notess.filter(notes => notes !== item);
+                    localStorage.setItem("notess", JSON.stringify(notess));
+                    location.reload();
+                }
+            });
+
+            deletebutton.textContent = "Delete";
+            deletebutton.style.marginLeft = "10px";
+            deletebutton.style.padding = "5px";
+            deletebutton.style.backgroundColor = "red";
+            deletebutton.style.outline = "none";
+            li.appendChild(deletebutton);
+            notesList.appendChild(li);
+        });
+    };
+
+    // handle form submission
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const notesText = form.notes.value.trim();
+
+        if (notesText) {
+            // save to localStorage
+            let notess = JSON.parse(localStorage.getItem("notess")) || [];
+            notess.push(notesText);
+            localStorage.setItem("notess", JSON.stringify(notess));
+
+            // display immediately
+            const li = document.createElement("li");
+            li.textContent = notesText;
+            notesList.appendChild(li);
+
+            alert("Thank you for your notes!");
+            form.reset();
+            // Reload the current page
+            location.reload();
+        }
+    });
+</script>
+</body>
+</html>
